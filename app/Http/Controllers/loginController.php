@@ -14,7 +14,6 @@ class loginController extends Controller
 
     public function login(Request $request)
     {
-        dd('si entro');
         // 🔥 VALIDAR
         $validator = Validator::make($request->all(), [
             'correo' => 'required|email',
