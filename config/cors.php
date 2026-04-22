@@ -2,16 +2,11 @@
 
 return [
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => [
-        'http://localhost:5173',
-        'https://orange-mushroom-014a0d810.7.azurestaticapps.net',
-    ],
-
-    'allowed_origins_patterns' => [],
+    'allowed_origins' => ['*'],
 
     'allowed_headers' => ['*'],
 
