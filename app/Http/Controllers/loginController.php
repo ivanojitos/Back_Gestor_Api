@@ -34,7 +34,7 @@ class loginController extends Controller
         if (!$jugador) {
             return response()->json([
                 'ok' => false,
-                'message' => 'Usuario no encontrado'
+                'message' => 'Usuario no encontrado como vez loco'
             ], 404);
         }
 
