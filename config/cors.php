@@ -6,7 +6,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://orange-mushroom-014a0d810.7.azurestaticapps.net'
+    ],
 
     'allowed_headers' => ['*'],
 
