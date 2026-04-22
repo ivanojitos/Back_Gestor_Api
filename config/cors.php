@@ -6,7 +6,10 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'], // 👈 temporal (para pruebas)
+    'allowed_origins' => [
+        'http://localhost:5173',
+        'https://orange-mushroom-014a0d810.7.azurestaticapps.net',
+    ],
 
     'allowed_origins_patterns' => [],
 
