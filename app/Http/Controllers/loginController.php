@@ -29,8 +29,8 @@ class loginController extends Controller
 
            return response()->json([
             'ok' => false,
-            'message' => "si paso aqui 01"
-        ], 404);
+            'data' => "si paso aqui 01"
+        ], 422);
 
         // 🔍 BUSCAR USUARIO
         $jugador = Jugador::where('Correo', $request->correo)->first();
