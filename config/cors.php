@@ -1,14 +1,15 @@
 <?php
 
 return [
-
-    'paths' => ['api/*'],
+    'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
         'https://delightful-coast-0185b821e.7.azurestaticapps.net'
     ],
+
+    'allowed_origins_patterns' => [],
 
     'allowed_headers' => ['*'],
 
@@ -17,5 +18,4 @@ return [
     'max_age' => 0,
 
     'supports_credentials' => false,
-
 ];
