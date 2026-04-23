@@ -27,13 +27,18 @@ class loginController extends Controller
         //     ], 422);
         // }
 
+           return response()->json([
+            'ok' => false,
+            'errors' => "si paso aqui 01"
+        ], 422);
+
         // 🔍 BUSCAR USUARIO
         $jugador = Jugador::where('Correo', $request->correo)->first();
 
         return response()->json([
             'ok' => false,
-            'errors' => "si paso aqui"
-        ], 422);
+            'message' => "si paso aqui"
+        ], 404);
         // ❌ NO EXISTE
         // if (!$jugador) {
         //     return response()->json([
