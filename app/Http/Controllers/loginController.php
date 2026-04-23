@@ -15,43 +15,47 @@ class loginController extends Controller
     public function login(Request $request)
     {
         // 🔥 VALIDAR
-        $validator = Validator::make($request->all(), [
-            'correo' => 'required|email',
-            'password' => 'required|min:4',
-        ]);
+        // $validator = Validator::make($request->all(), [
+        //     'correo' => 'required|email',
+        //     'password' => 'required|min:4',
+        // ]);
 
-        if ($validator->fails()) {
-            return response()->json([
-                'ok' => false,
-                'errors' => $validator->errors()
-            ], 422);
-        }
+        // if ($validator->fails()) {
+        //     return response()->json([
+        //         'ok' => false,
+        //         'errors' => $validator->errors()
+        //     ], 422);
+        // }
 
         // 🔍 BUSCAR USUARIO
         $jugador = Jugador::where('Correo', $request->correo)->first();
 
-        // ❌ NO EXISTE
-        if (!$jugador) {
-            return response()->json([
-                'ok' => false,
-                'message' => 'Usuario no encontrado como vez loco'
-            ], 404);
-        }
-
-        // 🔐 VALIDAR PASSWORD
-        if (!Hash::check($request->password, $jugador->Password)) {
-            return response()->json([
-                'ok' => false,
-                'message' => 'Contraseña incorrecta'
-            ], 401);
-        }
-
-        // ✅ LOGIN OK
         return response()->json([
-            'ok' => true,
-            'message' => 'Login correcto',
-            'user' => $jugador
-        ]);
+            'ok' => false,
+            'errors' => "si paso aqui"
+        ], 422);
+        // ❌ NO EXISTE
+        // if (!$jugador) {
+        //     return response()->json([
+        //         'ok' => false,
+        //         'message' => 'Usuario no encontrado como vez loco'
+        //     ], 404);
+        // }
+
+        // // 🔐 VALIDAR PASSWORD
+        // if (!Hash::check($request->password, $jugador->Password)) {
+        //     return response()->json([
+        //         'ok' => false,
+        //         'message' => 'Contraseña incorrecta'
+        //     ], 401);
+        // }
+
+        // // ✅ LOGIN OK
+        // return response()->json([
+        //     'ok' => true,
+        //     'message' => 'Login correcto',
+        //     'user' => $jugador
+        // ]);
     }
     public function crearJugador(Request $request)
     {
