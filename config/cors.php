@@ -7,7 +7,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://orange-mushroom-014a0d810.7.azurestaticapps.net'
+        'https://delightful-coast-0185b821e.7.azurestaticapps.net'
     ],
 
     'allowed_headers' => ['*'],
