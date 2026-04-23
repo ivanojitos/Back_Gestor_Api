@@ -14,6 +14,7 @@ class loginController extends Controller
 
     public function login(Request $request)
     {
+        dd($request->correo);
         // 🔥 VALIDAR
         $validator = Validator::make($request->all(), [
             'correo' => 'required|email',
@@ -28,6 +29,7 @@ class loginController extends Controller
         }
 
         $correo = trim($request->correo);
+
 
         $jugador = Jugador::whereRaw('LTRIM(RTRIM(Correo)) = ?', [$correo])->first();
 
