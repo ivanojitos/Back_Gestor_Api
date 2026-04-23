@@ -1,11 +1,13 @@
 <?php
 
 return [
-    'paths' => ['*'],
+    'paths' => ['api/*'],
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://delightful-coast-0185b821e.7.azurestaticapps.net'
+    ],
 
     'allowed_headers' => ['*'],
 
