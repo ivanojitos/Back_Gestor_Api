@@ -29,7 +29,7 @@ class loginController extends Controller
 
            return response()->json([
             'ok' => false,
-            'errors' => "si paso aqui 01"
+            'message' => "si paso aqui 01"
         ], 404);
 
         // 🔍 BUSCAR USUARIO
