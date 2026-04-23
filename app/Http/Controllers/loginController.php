@@ -30,7 +30,7 @@ class loginController extends Controller
            return response()->json([
             'ok' => false,
             'errors' => "si paso aqui 01"
-        ], 422);
+        ], 404);
 
         // 🔍 BUSCAR USUARIO
         $jugador = Jugador::where('Correo', $request->correo)->first();
