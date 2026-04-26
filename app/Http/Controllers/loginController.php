@@ -48,7 +48,11 @@ class loginController extends Controller
         if (!Hash::check($request->password, $jugador->Password)) {
             return response()->json([
                 'ok' => false,
-                'message' => 'Contraseña incorrecta' . $request->password . ' - ' . $jugador->Password
+                'message' => 'Contraseña incorrecta 1',
+                'debug' => [
+                    'input_password' => $request->password,
+                    'hash_bd' => $jugador->Password
+                ]
             ], 401);
         }
 
